@@ -1,0 +1,318 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingNoBold}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\small #1} & {\color{dark-grey}\small #2}\\
+    \end{tabular*}\vspace{-12pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Cheonwoo Lee} \\ \vspace{5pt}
+    \small 
+    \faEnvelope \hspace{2pt} \texttt{onleecw@gmail.com} \hspace{6pt} $|$
+    \hspace{6pt} \faGoogle \hspace{2pt} 
+    \href{https://scholar.google.com/citations?user=cFufNPUAAAAJ}{Google Scholar}
+    \hspace{6pt} $|$ \hspace{6pt}
+    \faLinkedin \hspace{2pt}
+    \href{https://www.linkedin.com/in/cheonwoolee}{LinkedIn}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------INTRO-----------
+\section{INTRODUCTION}
+\small{
+I am a Machine Learning Engineer at Moloco, focusing on ads quality.
+I received my M.S. in Electrical Engineering from KAIST, where I conducted research in the Data AI Lab under the supervision of \href{https://jaeminyoo.github.io/}{Prof. Jaemin Yoo}.
+My research interests include machine learning, recommendation systems, graph neural networks, and time-series modeling, with a focus on developing theoretically grounded methods for real-world applications.
+}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Korea Advanced Institute of Science and Technology (KAIST)}{09/2024 -- 08/2026}
+  {M.S. in Electrical Engineering}{Daejeon, South Korea}
+  \resumeItemListStart
+    \resumeItem{GPA: 4.12/4.3}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Korea Advanced Institute of Science and Technology (KAIST)}{03/2018 -- 08/2024}
+  {B.S. in Electrical Engineering; B.S. in Mathematical Sciences (Double major)}{Daejeon, South Korea}
+  \resumeItemListStart
+    \resumeItem{GPA: 3.92/4.3 (Magna Cum Laude)}
+    \resumeItem{Military leave of absence: 01/2021 -- 07/2022}
+  \resumeItemListEnd
+
+
+
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{RESEARCH EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {DAI Lab, KAIST}{01/2024 -- 08/2024}
+  {Individual Study (Advisor: Prof. Jaemin Yoo)}{Daejeon, South Korea}
+  \resumeItemListStart
+    \resumeItem{Conducted research on irregular time series modeling, focusing on graph-based and multi-scale approaches.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Circuit Lab, KAIST}{12/2022 -- 02/2023}
+  {Individual Study (Advisor: Prof. Hyun-sik Kim)}{Daejeon, South Korea}
+  \resumeItemListStart
+    \resumeItem{Studied oscillator design for analog circuits and analyzed relaxation oscillators using active filters.}
+  \resumeItemListEnd
+
+
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+\small{(* denotes equal contribution)}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{[6] Streaming Virtual Metrology via Lightweight Adaptation under Temporal Distribution Shifts}}{}
+\resumeItemListStart
+\resumeItem{Doyun Choi*, \myuline{Cheonwoo Lee}*, Younghyun Han, Kiwook Han, Jinkook Park, Sungyoon Ryu, Younghoon Sohn, Jaemin Yoo}
+\resumeItem{BigData 2026}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{[5] Beyond Graph Information Bottleneck: Creating Bimodal Edge Score Distributions for GNN Explanation}}{}
+\resumeItemListStart
+\resumeItem{Taewook Ham, \myuline{Cheonwoo Lee}, Myeong Kong, Jaemin Yoo}
+\resumeItem{BigData 2026 (Short)}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{[4] Generalizing Multi-Scale Time-Series Modeling with a Single Operator}}{}
+\resumeItemListStart
+\resumeItem{\myuline{Cheonwoo Lee}, Dooho Lee, Doyun Choi, Jaemin Yoo}
+\resumeItem{ICML 2026}
+\resumeItemListEnd
+
+
+
+
+
+
+\resumeProjectHeading
+{\textbf{[3] PULSE: Socially-Aware User Representation Modeling Toward Parameter-Efficient Graph Collaborative Filtering}}{}
+\resumeItemListStart
+\resumeItem{Doyun Choi*, \myuline{Cheonwoo Lee}*, Biniyam Aschalew Tolera, Taewook Ham, Chanyoung Park, Jaemin Yoo}
+\resumeItem{WWW 2026 (\textbf{Oral}, Top 9.4\%)}
+\resumeItemListEnd
+
+
+\resumeProjectHeading
+{\textbf{[2] Simple and Behavior-Driven Augmentation for Recommendation with Rich Collaborative Signals}}{}
+\resumeItemListStart
+\resumeItem{Doyun Choi, \myuline{Cheonwoo Lee}, Jaemin Yoo}
+\resumeItem{BigData 2025 (Short)}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{[1] Aggregation Buffer: Revisiting DropEdge with a New Parameter Block}}{}
+\resumeItemListStart
+\resumeItem{Dooho Lee, Myeong Kong, Sagad Hamid, \myuline{Cheonwoo Lee}, Jaemin Yoo}
+\resumeItem{ICML 2025}
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+%-----------INDUSTRY-----------
+\section{INDUSTRY EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Moloco}{09/2026 -- Present}
+  {Machine Learning Engineer, Ads Quality}{Seoul, South Korea}
+
+\resumeSubheading
+  {Samsung Electronics}{02/2023 -- 08/2023}
+  {Intern}{Hwaseong, South Korea}
+  \resumeItemListStart
+    \resumeItem{Improved circuit parameter estimation accuracy using nonlinear optimization (LM algorithm).}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{AWARDS}
+\resumeSubHeadingListStart
+
+\resumeSubheadingNoBold{Dean’s List, KAIST}{Fall 2022}
+\resumeSubheadingNoBold{Scholarship for Academic Excellence, KAIST}{Spring 2020}
+\resumeSubheadingNoBold{Hanseong Nobel Scholarship, Hanseong Sonjaehan Scholarship Foundation}{2016--2017}
+\resumeSubheadingNoBold{Grand Prize, The 3rd Energy Technology Creative Ideas Competition (Ministry of Trade, Industry and Resources)}{2016}
+
+\resumeSubHeadingListEnd
+
+%-----------TEACHING-----------
+\section{TEACHING}
+\resumeSubHeadingListStart
+
+\resumeSubheadingNoBold{Teaching Assistant, EE49904(G) AI Foundation Models: Theory and Practice, KAIST}{Spring 2026}
+\resumeSubheadingNoBold{Teaching Assistant, EE412 Foundation of Big Data Analytics, KAIST}{Fall 2025}
+\resumeSubheadingNoBold{Teaching Assistant, EE209 Programming Structure for Electrical Engineering, KAIST}{Spring 2025}
+\resumeSubheadingNoBold{AI Application Specialist, Understanding Data Model, Samsung Electronics}{01/2025 -- 07/2025}
+\resumeSubheadingNoBold{Academic Tutor, Calculus I, KAIST}{Spring 2019, Spring 2020}
+
+\resumeSubHeadingListEnd
+
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages}            {: Python, C, MATLAB}\vspace{2pt} \\
+     \textbf{ML Frameworks}        {: PyTorch, TensorFlow, Weights \& Biases}\vspace{2pt} \\
+     \textbf{Tools}                {: Git, Figma, Adobe Premiere Pro}\vspace{2pt} \\
+     \textbf{Language Proficiency} {: Korean (Native), English (Fluent)}
+    }}
+ \end{itemize}
+
+\end{document}
