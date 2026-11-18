@@ -1,10 +1,9 @@
 # CV source
 
 `main.tex` is the original Overleaf source, updated to match the latest uploaded
-CV: the current Moloco introduction, seven publications including the accepted
-WSDM 2027 paper, and equal-contribution marks for the streaming virtual metrology
-paper. The website's `CV.pdf` is the
-exact uploaded PDF.
+CV: the current Moloco introduction, eight publications including the KDD 2027
+paper, and equal-contribution marks for the streaming virtual metrology paper.
+The website's `CV.pdf` is the exact uploaded PDF.
 
 To update the existing Overleaf project, replace its `main.tex` with this file,
 select pdfLaTeX, and recompile. You can also upload `main.tex` to a new Overleaf
